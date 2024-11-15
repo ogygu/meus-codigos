@@ -52,8 +52,19 @@ num2 = int(input("digite um numero :"))
 
 resultado = multiplicação(num1,num2)
 print(resultado)"""
+"""
+
 
 #5
+def multiplicação_manual():
+    num= int(input('digite um numero:'))
+    multiplicação = int(input(f'vai ser {num} X ? :'))
+    cont = 0
+    for i in range(1,multiplicação + 1):
+        cont += num
+    print(f"{num}X{multiplicação} = {cont}") 
+multiplicação_manual() """      
+
 """
 #6
 def potencia(x,y):
@@ -65,13 +76,109 @@ num2 = int(input("digite um numero :"))
 
 resultado = potencia(num1,num2)
 print(resultado)"""
+"""
+#7
+def potencia_manual():
+    num = int(input('digite um numero inteiro :'))
+    potencia = int(input(f'{num}**?:'))
+    cont = 1
+  
+    for i in range(potencia):
+        cont*= num
+            
+    print(f'{num}**{potencia} = {cont}')
+potencia_manual()"""   
 
-def verificar_numeroPrimo(x,y):
-    
+"""
+#8
+def vweificar_numero_primo(x):
+    if x <= 1:
+        return False
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            print("não é  primo")
+            return False
+    print(" é primo ")    
+    return True
+
+num = int((input('digite um numero para ver se é primo:')))
+resultado = vweificar_numero_primo(num)"""
 
 
 
-    
+"""
+#9
+def fat(x):
+    if x <= 1:
+        print("digite numero maiores que 1")
+    contador = 1
+    for i in range(1,x + 1):
+        contador*= i
+    return contador
+
+num = int(input('digite um numero:'))
+resultado = fat(num)
+print(resultado)"""    
+
+"""
+#10
+def arranjo():
+
+    def fatorial_x(x):
+        if x <= 1 :
+            print('digite numeros maiores que 1')
+        contador = 1    
+        for i in range(1, x + 1):
+            contador*= i
+        return contador
+    numN = int(input('digite um numero inteiro:'))
+    resultadoN = fatorial_x(numN)
+    print("---------------------------------------------------------------")
+    numP = int(input('digite um numero inteiro P para calcular o arranjo :'))
+    subtração = numN - numP
+    def fatorial_Subtração(s):
+        if s <= 1 :
+            print('digite numeros maiores que 1')
+        contador = 1    
+        for i in range(1, s + 1):
+            contador*= i
+        return contador
+    resultadoSub = fatorial_Subtração(subtração)
+
+    Arranjo = resultadoN/resultadoSub
+    print(Arranjo)
+
+arranjo()"""
+
+
+"""
+#11
+def combinação():
+    def fatorial_x(x):
+        if x <= 1 :
+            print('digite numeros maiores que 1')
+        contador = 1    
+        for i in range(1, x + 1):
+            contador*= i
+        return contador
+    numN = int(input('digite um numero inteiro:'))
+    resultadoN = fatorial_x(numN)
+    print("---------------------------------------------------------------")
+    numP = int(input('digite um numero inteiro P para calcular o arranjo :'))
+    subtração = numN - numP
+    def fatorial_Subtração(s):
+        if s <= 1 :
+            print('digite numeros maiores que 1')
+        contador = 1    
+        for i in range(1, s + 1):
+            contador*= i
+        return contador
+    resultadoSub = fatorial_Subtração(subtração)
+    resultadoP = fatorial_x(numP)
+
+    Combinação = resultadoN/(resultadoP *resultadoSub)
+    print(Combinação)
+combinação() """
 
 
 
