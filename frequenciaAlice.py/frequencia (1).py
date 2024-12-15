@@ -47,10 +47,3 @@ def verificrFrquencia(escolherPalavras, dicionarioAlice):
 arquivo = 'alice.txt'
 
 
-#escolherP = str(input("Digite a palavra em ingles a ser encontrada no arquivo:")).lower()"""  
-resultado = carregarPalavrasArquivo(arquivo)
-frequencia = frequenciaPalavrasDicionario(resultado)
-print(frequencia)
-#frequencia2 = verificrFrquencia(escolherP,frequencia)"""
-
-#print(f" {escolherP}:{frequencia2}  " ) 
