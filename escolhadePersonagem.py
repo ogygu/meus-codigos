@@ -35,7 +35,7 @@ lutas = [
     {"p1": "chun-li", "p2": "chun-li", "venceu": "p1"},
 ]
 
-# a. Para cada personagem, mostre na tela a soma das estatísticas do personagem
+
 def soma_estatisticas(personagens):
     estatisticas = {}
     for nome, stats in personagens.items():
@@ -43,7 +43,7 @@ def soma_estatisticas(personagens):
         estatisticas[nome] = total
     return sorted(estatisticas.items(), key=lambda x: x[1])
 
-# b. Mostre na tela os valores médios das estatísticas de todos os personagens
+
 def media_estatisticas(personagens):
     total_stats = {"forca": 0, "vida": 0, "velocidade": 0, "magia": 0}
     num_personagens = len(personagens)
@@ -55,7 +55,7 @@ def media_estatisticas(personagens):
     media_stats = {key: total / num_personagens for key, total in total_stats.items()}
     return media_stats
 
-# c. O nome e os dados do personagem escolhido com mais frequência
+
 def personagem_mais_escolhido(lutas):
     escolhas = {}
     for luta in lutas:
@@ -69,7 +69,6 @@ def personagem_mais_escolhido(lutas):
     mais_escolhido = sorted(escolhas.items(), key=lambda x: (-x[1], x[0]))[0][0]
     return mais_escolhido, personagens[mais_escolhido]
 
-# d. O nome e os dados do personagem que levou a um maior número de vitórias
 def personagem_mais_vitorioso(lutas):
     vitorias = {}
     for luta in lutas:
@@ -83,7 +82,6 @@ def personagem_mais_vitorioso(lutas):
     mais_vitorioso = sorted(vitorias.items(), key=lambda x: (-x[1], x[0]))[0][0]
     return mais_vitorioso, personagens[mais_vitorioso]
 
-# Exibindo as informações
 print("Soma das estatísticas dos personagens (em ordem ascendente):")
 for nome, total in soma_estatisticas(personagens):
     print(f"{nome}: {total}")
